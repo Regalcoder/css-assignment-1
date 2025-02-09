@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Boxes</title>
+    <style>
+        /* Center the container */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        /* Main container for the boxes */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #9c9ec4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			height: 100%;
+			width: 500px;
+			justify-content: center;
+            align-items: center;
+        }
+
+        /* Box 1 styles */
+        .box1 {
+            width: 200px;
+            height: 50px;
+            background-color: #ffefb1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px 25px 25px 5px;
+            margin-bottom: -25px; /* Intertwine with box2 */
+			margin-right: 220px;
+			margin-top: 20px;
+            z-index: 1; /* Ensure it overlaps box2 */
+			position: absolute;
+			top: 140px;
+        }
+
+        /* Box 2 styles */
+        .box2 {
+            width: 400px;
+            height: 200px;
+            background-color: #d6d6d6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px 10px 0 0;
+            overflow: hidden; /* Ensure the image fits inside */
+			position: relative;
+        }
+
+        .box2 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the image covers the box */
+        }
+
+        /* Box 3 styles */
+        .box3 {
+            width: 380px;
+            height: 150px;
+            background-color: #ffffff;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .box3 p {
+            margin: 0;
+        }
+		span{
+			font-size:15px;
+			font-weight: 200;
+		}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Box 1 -->
+        <div class="box1">New and Improved!</div>
+
+        <!-- Box 2 -->
+        <div class="box2">
+			<img src="images.jfif" alt="Kirk Beard" class="author-image">
+        </div>
+
+        <!-- Box 3 -->
+        <div class="box3">
+			<h2> Novus Watch <span>Series IV</span></h2>
+            <p>The pinnacle of fashion and tech. 
+			This wearable piece is an homage to gilded palaces and minimal regalia, 
+			combining nouveau-deco and brutalism influences in a compact, Swiss-made watch.</p>
+        </div>
+    </div>
+</body>
+</html>
